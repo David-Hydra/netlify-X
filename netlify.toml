@@ -1,0 +1,9 @@
+# The project lives in netlify-XTTP/ and has no build step: it is a single
+# Netlify Edge Function (no framework, no npm dependencies).
+[build]
+  publish = "netlify-XTTP"
+  edge_functions = "netlify-XTTP/edge-functions"
+
+[[edge_functions]]
+  path = "/*"
+  function = "proxy"
